@@ -15,13 +15,13 @@ await db.collection('books').insertMany([\
     description: 'Классичечкий роман.',\
     authors: 'Булгаков М.А.'\
   }\
-])\
-\
+])
+
 * запрос для *поиска* полей документов коллекции **books** по полю *title*:\
 const cursor = db.collection('books').find({ title: 'Сборник задач по физике.' })\
-\
+
 * запрос для *редактирования* полей: *description* и *authors* коллекции **books** по *_id* записи\
  await db.collection('books').updateOne(\
   { id: 'dce5ccf7-f598-4843-9284-8f9a8dd17903А' },\
   {$set: { description': 'Сборник задач по физике новое издание.', authors: 'Петерсон М.И.' }}\
-)\
+)
